@@ -69,6 +69,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.CompareWidth,
 		C3.Plugins.Sprite.Acts.SetX,
 		C3.Plugins.Sprite.Acts.SetWidth,
+		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.AJAX.Acts.SetHeader,
 		C3.Plugins.AJAX.Acts.OverrideMIMEType,
 		C3.Plugins.AJAX.Acts.Post,
