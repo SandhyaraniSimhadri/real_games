@@ -1405,6 +1405,11 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => "general",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
+		() => "Ready",
 		() => "start",
 		() => 150,
 		() => "tent",
@@ -1428,10 +1433,6 @@ self.C3_ExpressionFuncs = [
 		() => 80,
 		() => 0.4,
 		() => "ducks",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("yellow", "yellow", "yellow", "green", "red", "king");
