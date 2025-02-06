@@ -85,7 +85,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
 		C3.Plugins.Audio.Acts.SetSilent,
 		C3.Plugins.Audio.Cnds.IsSilent,
-		C3.Plugins.System.Cnds.OnLoadComplete,
 		C3.Plugins.Browser.Acts.ExecJs,
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.AJAX.Acts.Request,
