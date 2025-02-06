@@ -1405,11 +1405,6 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => "general",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
-		() => "Ready",
 		() => "start",
 		() => 150,
 		() => "tent",
@@ -1433,6 +1428,10 @@ self.C3_ExpressionFuncs = [
 		() => 80,
 		() => 0.4,
 		() => "ducks",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("yellow", "yellow", "yellow", "green", "red", "king");
@@ -1550,7 +1549,6 @@ self.C3_ExpressionFuncs = [
 		() => 30,
 		() => 340,
 		() => 1580,
-		() => 60,
 		() => "wave_1",
 		() => 0.2,
 		() => "Content-Type",
@@ -1598,15 +1596,8 @@ self.C3_ExpressionFuncs = [
 		() => "data",
 		() => "ds1_record",
 		() => "sound",
-		() => "login_api",
-		() => "https://51.20.122.168/api/gameUserLogin",
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			return () => (((((((("{" + "\"email\"") + ": \"") + n0.ExpObject()) + "\", ") + "\"password\"") + ": \"") + n1.ExpObject()) + "\"}");
-		},
-		() => "login_status",
-		() => "success",
+		() => "loadGoogleSignIn();",
+		() => "var script = document.createElement('script');\nscript.src = 'https://apis.google.com/js/platform.js';\nscript.async = true;\nscript.defer = true;\n\n// Once the script is loaded, initialize Google Sign-In\nscript.onload = function() {\n    console.log('Google API script loaded successfully.');\n    \n    // Define the loadGoogleSignIn function\n    function loadGoogleSignIn() {\n        gapi.load('auth2', function() {\n            gapi.auth2.init({\n                client_id: '765778049317-2f9r5d1jf25kf17qohu92tc9p8c79gli.apps.googleusercontent.com'\n            }).then(function(auth2) {\n                // Listen for the sign-in button click\n                document.getElementById('googleSignInButton').addEventListener('click', function() {\n                    auth2.signIn().then(function(googleUser) {\n                        var profile = googleUser.getBasicProfile();\n                        var id_token = googleUser.getAuthResponse().id_token;\n                        console.log('Google ID Token: ', id_token);\n                        console.log('Name: ' + profile.getName());\n                        console.log('Email: ' + profile.getEmail());\n\n                        // Store user data in Construct 3 global variables\n                        runtime.globalVars.UserName = profile.getName();\n                        runtime.globalVars.UserEmail = profile.getEmail();\n                    });\n                });\n            });\n        });\n    }\n    \n    // Call the loadGoogleSignIn function\n    loadGoogleSignIn();\n};\n\n// Add the script to the document head\ndocument.head.appendChild(script);",
 		() => "Game with XML",
 		() => "game",
 		() => "xml/your_game.xml",
