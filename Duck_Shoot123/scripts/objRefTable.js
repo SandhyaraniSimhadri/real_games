@@ -72,6 +72,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.AJAX.Acts.SetHeader,
 		C3.Plugins.AJAX.Acts.OverrideMIMEType,
+		C3.Plugins.Browser.Exps.ExecJS,
 		C3.Plugins.AJAX.Acts.Post,
 		C3.ScriptsInEvents.Events_game_Event95_Act18,
 		C3.Plugins.Sprite.Exps.X,
