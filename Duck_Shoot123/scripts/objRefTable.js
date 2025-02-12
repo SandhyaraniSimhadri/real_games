@@ -74,7 +74,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Exps.ExecJS,
 		C3.Plugins.Browser.Exps.Platform,
 		C3.Plugins.AJAX.Acts.Post,
-		C3.ScriptsInEvents.Events_game_Event95_Act18,
+		C3.ScriptsInEvents.Events_game_Event95_Act17,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Acts.RotateClockwise,
 		C3.Plugins.LocalStorage.Acts.SetItem,
