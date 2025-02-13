@@ -3,7 +3,12 @@
 
 const scriptsInEvents = {
 
-	async Events_game_Event95_Act17(runtime, localVars)
+	async Events_game_Event95_Act16(runtime, localVars)
+	{
+		
+	},
+
+	async Events_game_Event95_Act18(runtime, localVars)
 	{
 		
 	}
