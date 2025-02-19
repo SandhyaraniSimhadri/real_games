@@ -1478,12 +1478,14 @@ self.C3_ExpressionFuncs = [
 		() => 140,
 		() => "sounds",
 		() => "shoot",
-		() => "final",
-		() => -5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
+		() => "success",
+		() => "token",
+		() => "final",
+		() => -5,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 5);
@@ -1563,7 +1565,7 @@ self.C3_ExpressionFuncs = [
 			return () => (and((((and((and("{\n  \"gameKey\": \"DuckShoot\",\n  \"level\": 1,\n  \"score\": ", v0.GetValue()) + ",\n  \"timestamp\": \""), f1("new Date().toISOString()")) + "\",\n  \"metadata\": {\n    \"platform\": \"") + f2()) + "\",\n    \"device\": \""), f3("\n      let ua = navigator.userAgent;\n      if (/Android/.test(ua)) {\n          let match = ua.match(/SM-[A-Z0-9]+|ONEPLUS [A-Z0-9]+|M2007J3SG|Redmi Note [0-9]+|Mi [A-Z0-9]+/i);\n          return match ? match[0] : 'Unknown Android';\n      } else if (/iPhone/.test(ua)) {\n          return 'iPhone (Exact model hidden by Apple)';\n      } else {\n          return 'Unknown Device';\n      }\n    ")) + "\"\n  }\n}");
 		},
 		() => "high_score",
-		() => "https://51.20.122.168/api/userScore",
+		() => "https://lifestyle-web.cmeoffshore.com:39459/gamebe/api/games/user-score",
 		() => "POST",
 		() => 960,
 		() => 670,
@@ -1602,6 +1604,10 @@ self.C3_ExpressionFuncs = [
 		() => "window.c3_runtime = globalThis.runtime;\nconsole.log('✅ Construct 3 runtime is stored globally!');\n\n// Load Google Sign-In API\nconst googleSignInScript = document.createElement('script');\ngoogleSignInScript.src = 'https://accounts.google.com/gsi/client';\ngoogleSignInScript.async = true;\ngoogleSignInScript.defer = true;\ngoogleSignInScript.onload = function () {\n    console.log('✅ Google Sign-In API Loaded!');\n    window.googleAPILoaded = true;\n\n    google.accounts.id.initialize({\n        client_id: '765778049317-2f9r5d1jf25kf17qohu92tc9p8c79gli.apps.googleusercontent.com',  // Replace with your Google Client ID\n        callback: handleGoogleLogin\n    });\n};\ndocument.head.appendChild(googleSignInScript);\n",
 		() => "window.handleGoogleLogin = function (response) {\n    const userCredential = response.credential;\n    const decodedJWT = JSON.parse(atob(userCredential.split('.')[1]));\n\n    console.log('✅ User Signed In: ' + decodedJWT.name);\n\n    // Store user info in Construct 3 Global Variables\n    window.c3_runtime.globalVars.userID = decodedJWT.sub;\n    window.c3_runtime.globalVars.userName = decodedJWT.name;\n    window.c3_runtime.globalVars.userEmail = decodedJWT.email;\n\n    // Call a Construct 3 function to show username\n    window.c3_runtime.callFunction('OnGoogleSignInSuccess', decodedJWT.name);\n};",
 		() => "if (window.googleAPILoaded) {\n    google.accounts.id.prompt();  // Show Google Sign-In popup\n} else {\n    console.log('❌ Google Sign-In API is not ready yet!');\n}\n",
+		() => "https://51.20.122.168/api/gameUserLogin",
+		() => "{'username': Username.Text, 'password': PasswordInput.Text}",
+		() => "login",
+		() => "not_start",
 		() => "Game with XML",
 		() => "game",
 		() => "xml/your_game.xml",
