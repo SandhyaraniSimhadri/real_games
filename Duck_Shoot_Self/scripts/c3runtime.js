@@ -1612,10 +1612,6 @@ self.C3_ExpressionFuncs = [
 		() => "login",
 		() => "https://51.20.122.168/api/gameUserLogin",
 		() => "{'username': Username.Text, 'password': PasswordInput.Text}",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject("status");
-		},
 		() => "not_start",
 		() => "Game with XML",
 		() => "game",
