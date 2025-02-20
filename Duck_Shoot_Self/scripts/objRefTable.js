@@ -96,6 +96,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Browser.Acts.ConsoleLog,
 		C3.Plugins.Dictionary.Acts.JSONLoad,
+		C3.Plugins.TextBox.Acts.SetVisible,
+		C3.Plugins.Button.Acts.SetVisible,
 		C3.Plugins.AJAX.Acts.Request,
 		C3.Plugins.XML.Acts.Load,
 		C3.Plugins.XML.Exps.StringValue,
