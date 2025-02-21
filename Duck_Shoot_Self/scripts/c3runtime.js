@@ -1405,7 +1405,6 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => "general",
-		() => "start",
 		() => 150,
 		() => "tent",
 		() => 0,
@@ -1417,6 +1416,7 @@ self.C3_ExpressionFuncs = [
 		() => 2,
 		() => "ready",
 		() => "duck",
+		() => "start",
 		() => 180,
 		() => 181,
 		() => 175,
