@@ -174,6 +174,7 @@ self.C3_JsPropNameTable = [
 	{loginbtn: 0},
 	{ScoreData: 0},
 	{apiResponse: 0},
+	{gameover: 0},
 	{Sine: 0},
 	{waves: 0},
 	{Bullet2: 0},
@@ -264,6 +265,7 @@ self.InstanceType = {
 	loginbtn: class extends self.IButtonInstance {},
 	ScoreData: class extends self.IDictionaryInstance {},
 	apiResponse: class extends self.IJSONInstance {},
+	gameover: class extends self.ISpriteInstance {},
 	waves: class extends self.ISpriteInstance {},
 	characters: class extends self.ISpriteInstance {},
 	characters_one_more: class extends self.ISpriteInstance {}
