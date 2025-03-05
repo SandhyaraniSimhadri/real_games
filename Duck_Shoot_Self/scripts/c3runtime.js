@@ -1625,6 +1625,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("new URLSearchParams(window.location.search).get('token')");
 		},
+		() => "var url = new URL(window.location.href);\nvar tokenValue = url.searchParams.get('token');\nruntime.globalVars.token = tokenValue;\nconsole.log('Extracted Token: ' + tokenValue);\n",
 		() => "Game with XML",
 		() => "game",
 		() => "xml/your_game.xml",
