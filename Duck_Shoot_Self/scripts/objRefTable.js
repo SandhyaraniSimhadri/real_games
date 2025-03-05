@@ -190,6 +190,7 @@ self.C3_JsPropNameTable = [
 	{game_points: 0},
 	{game_record: 0},
 	{duck_time: 0},
+	{token: 0},
 	{jsonResponse: 0},
 	{duck_speed: 0},
 	{facebookShare: 0},

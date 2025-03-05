@@ -1564,7 +1564,10 @@ self.C3_ExpressionFuncs = [
 		() => "Content-Type",
 		() => "application/json",
 		() => "Authorization",
-		() => "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmdnR0Szc5WUw1WDg5ZlBvY2ZCam9fN2Y2MFUzc3hrd0dfY0E2aTBRbDVBIn0.eyJleHAiOjE3MzkxMDk0MjUsImlhdCI6MTczOTEwOTEyNSwianRpIjoiMDEzNTU5MzUtNTI3Ni00ZWFlLTlkZjMtM2VhYTc0YzBkNWU0IiwiaXNzIjoiaHR0cHM6Ly9iYWNrYmFzZS1pZGVudGl0eS1wcmVwcm9kLm5lby5zYS9hdXRoL3JlYWxtcy9yZXRhaWwiLCJzdWIiOiJkMTMwYWIyNy0xMmE0LTQzZWQtYTc5ZS0wYzA1MTgxYTg5NTUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJiYi10b29saW5nLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJmNWQyNDJhMS1hNGJmLTQ3NjktOGJhNC05MzFjMjVmM2RjODkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiZjVkMjQyYTEtYTRiZi00NzY5LThiYTQtOTMxYzI1ZjNkYzg5IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInVzZXJfbmFtZSI6ImQxMzBhYjI3LTEyYTQtNDNlZC1hNzllLTBjMDUxODFhODk1NSIsIm5hbWUiOiJSZXRhaWwgVGVzdCBVc2VyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZDEzMGFiMjctMTJhNC00M2VkLWE3OWUtMGMwNTE4MWE4OTU1IiwiZ2l2ZW5fbmFtZSI6IlJldGFpbCBUZXN0IiwiZmFtaWx5X25hbWUiOiJVc2VyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9ncm91cF91c2VyKFVTRVIpIiwiZGVmYXVsdC1yb2xlcy1yZXRhaWwiLCJvZmZsaW5lX2FjY2VzcyIsIlJPTEVfZ3JvdXBfdXNlcihVU0VSKSIsImRlZmF1bHQtcm9sZXMtcmV0YWlsIiwib2ZmbGluZV9hY2Nlc3MiLCJiYjpzdGVwLXVwIl0sImludGVybmFsX3Njb3BlIjpbIlJPTEVfZ3JvdXBfdXNlcihVU0VSKSIsImRlZmF1bHQtcm9sZXMtcmV0YWlsIiwib2ZmbGluZV9hY2Nlc3MiXSwiZW1haWwiOiJjbGllbnQxMDAwNDA4MzAwMDAwNEBleGFtcGxlLmNvbSJ9.NnNfrr6PLoeMaspWGRdRGBtcw23iV5FxzPLi-SoZ8eUtqYKopsIAFFZiYwutm1cHz9KpzgIWXvdSuLOOgdG6SVPCjj3IBhcitDe7vMa1yotQGqiPLJZb08ySJFxHV1KU0oRqRCOy1dHnApblkaabtC-q6-G3yWzHf8jD_5ypp2vWN8Gt_GKdBqpPeNNDIJLUHuv-OZ6ZJYTTFzsddlQ8hECVi41kuG31_wiHcAw3d_UOU2D_2OfQ1M6AuoSSDhrimip-FZZh45amozqJtWWshwwrO98craFJzbtxfIkKKxcAlq_aVTzyMGAgnZMZ8TIoahmgPRsrc4MooKBZVqnIsw",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ("Bearer " + v0.GetValue());
+		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const f1 = p._GetNode(1).GetBoundMethod();
@@ -1618,6 +1621,10 @@ self.C3_ExpressionFuncs = [
 		() => "window.handleGoogleLogin = function (response) {\n    const userCredential = response.credential;\n    const decodedJWT = JSON.parse(atob(userCredential.split('.')[1]));\n\n    console.log('✅ User Signed In: ' + decodedJWT.name);\n\n    // Store user info in Construct 3 Global Variables\n    window.c3_runtime.globalVars.userID = decodedJWT.sub;\n    window.c3_runtime.globalVars.userName = decodedJWT.name;\n    window.c3_runtime.globalVars.userEmail = decodedJWT.email;\n\n    // Call a Construct 3 function to show username\n    window.c3_runtime.callFunction('OnGoogleSignInSuccess', decodedJWT.name);\n};",
 		() => "if (window.googleAPILoaded) {\n    google.accounts.id.prompt();  // Show Google Sign-In popup\n} else {\n    console.log('❌ Google Sign-In API is not ready yet!');\n}\n",
 		() => "not_start",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("new URLSearchParams(window.location.search).get('token')");
+		},
 		() => "Game with XML",
 		() => "game",
 		() => "xml/your_game.xml",
