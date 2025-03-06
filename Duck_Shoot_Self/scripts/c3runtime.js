@@ -1578,11 +1578,7 @@ self.C3_ExpressionFuncs = [
 		() => "high_score",
 		() => "https://51.20.122.168/api/userScore",
 		() => "POST",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject("leftAttempts");
-		},
-		() => 3,
+		() => "not_start",
 		() => 960,
 		() => 670,
 		() => 250,
@@ -1620,7 +1616,6 @@ self.C3_ExpressionFuncs = [
 		() => "window.c3_runtime = globalThis.runtime;\nconsole.log('✅ Construct 3 runtime is stored globally!');\n\n// Load Google Sign-In API\nconst googleSignInScript = document.createElement('script');\ngoogleSignInScript.src = 'https://accounts.google.com/gsi/client';\ngoogleSignInScript.async = true;\ngoogleSignInScript.defer = true;\ngoogleSignInScript.onload = function () {\n    console.log('✅ Google Sign-In API Loaded!');\n    window.googleAPILoaded = true;\n\n    google.accounts.id.initialize({\n        client_id: '765778049317-2f9r5d1jf25kf17qohu92tc9p8c79gli.apps.googleusercontent.com',  // Replace with your Google Client ID\n        callback: handleGoogleLogin\n    });\n};\ndocument.head.appendChild(googleSignInScript);\n",
 		() => "window.handleGoogleLogin = function (response) {\n    const userCredential = response.credential;\n    const decodedJWT = JSON.parse(atob(userCredential.split('.')[1]));\n\n    console.log('✅ User Signed In: ' + decodedJWT.name);\n\n    // Store user info in Construct 3 Global Variables\n    window.c3_runtime.globalVars.userID = decodedJWT.sub;\n    window.c3_runtime.globalVars.userName = decodedJWT.name;\n    window.c3_runtime.globalVars.userEmail = decodedJWT.email;\n\n    // Call a Construct 3 function to show username\n    window.c3_runtime.callFunction('OnGoogleSignInSuccess', decodedJWT.name);\n};",
 		() => "if (window.googleAPILoaded) {\n    google.accounts.id.prompt();  // Show Google Sign-In popup\n} else {\n    console.log('❌ Google Sign-In API is not ready yet!');\n}\n",
-		() => "not_start",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("token");
