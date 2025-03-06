@@ -97,6 +97,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Browser.Exps.QueryParam,
 		C3.Plugins.AJAX.Acts.Request,
 		C3.Plugins.XML.Acts.Load,
 		C3.Plugins.XML.Exps.StringValue,

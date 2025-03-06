@@ -1621,7 +1621,10 @@ self.C3_ExpressionFuncs = [
 		() => "window.handleGoogleLogin = function (response) {\n    const userCredential = response.credential;\n    const decodedJWT = JSON.parse(atob(userCredential.split('.')[1]));\n\n    console.log('✅ User Signed In: ' + decodedJWT.name);\n\n    // Store user info in Construct 3 Global Variables\n    window.c3_runtime.globalVars.userID = decodedJWT.sub;\n    window.c3_runtime.globalVars.userName = decodedJWT.name;\n    window.c3_runtime.globalVars.userEmail = decodedJWT.email;\n\n    // Call a Construct 3 function to show username\n    window.c3_runtime.callFunction('OnGoogleSignInSuccess', decodedJWT.name);\n};",
 		() => "if (window.googleAPILoaded) {\n    google.accounts.id.prompt();  // Show Google Sign-In popup\n} else {\n    console.log('❌ Google Sign-In API is not ready yet!');\n}\n",
 		() => "not_start",
-		() => "var urlParams = new URLSearchParams(window.location.search);\nvar tokenValue = urlParams.get('token');\nconsole.log('Extracted Token:', tokenValue);\nruntime.globalVars.token = tokenValue;",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("token");
+		},
 		() => "Game with XML",
 		() => "game",
 		() => "xml/your_game.xml",
