@@ -1631,7 +1631,6 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("/your_game/message_twitter/text()");
 		},
-		() => -10000,
 		() => "Facebook",
 		() => "Twitter"
 ];
