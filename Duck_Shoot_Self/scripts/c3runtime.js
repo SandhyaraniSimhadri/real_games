@@ -1565,6 +1565,7 @@ self.C3_ExpressionFuncs = [
 		() => 340,
 		() => 1580,
 		() => 0.2,
+		() => "not_start",
 		() => "Content-Type",
 		() => "application/json",
 		() => "Authorization",
@@ -1572,7 +1573,6 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => ("Bearer " + v0.GetValue());
 		},
-		() => "not_start",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const f1 = p._GetNode(1).GetBoundMethod();
