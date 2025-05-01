@@ -1442,20 +1442,18 @@ self.C3_ExpressionFuncs = [
 		() => "Content-Type",
 		() => "application/json",
 		() => "Authorization",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => ("Bearer " + v0.GetValue());
-		},
 		() => "not_start",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const f2 = p._GetNode(2).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
 			const f3 = p._GetNode(3).GetBoundMethod();
-			return () => (and((((and((and("{\n  \"gameKey\": \"DuckShoot\",\n  \"level\": 1,\n  \"score\": ", v0.GetValue()) + ",\n  \"timestamp\": \""), f1("new Date().toISOString()")) + "\",\n  \"metadata\": {\n    \"platform\": \"") + f2()) + "\",\n    \"device\": \""), f3("\n      let ua = navigator.userAgent;\n      if (/Android/.test(ua)) {\n          let match = ua.match(/SM-[A-Z0-9]+|ONEPLUS [A-Z0-9]+|M2007J3SG|Redmi Note [0-9]+|Mi [A-Z0-9]+/i);\n          return match ? match[0] : 'Unknown Android';\n      } else if (/iPhone/.test(ua)) {\n          return 'iPhone (Exact model hidden by Apple)';\n      } else {\n          return 'Unknown Device';\n      }\n    ")) + "\"\n  }\n}");
+			const f4 = p._GetNode(4).GetBoundMethod();
+			const f5 = p._GetNode(5).GetBoundMethod();
+			return () => (and((((and((and((and((("{\n  \"gameKey\": " + v0.GetValue()) + ",\n  \"campaign_id\": "), v1.GetValue()) + ",\n  \"level\": 1,\n  \"score\": "), v2.GetValue()) + ",\n  \"timestamp\": \""), f3("new Date().toISOString()")) + "\",\n  \"metadata\": {\n    \"platform\": \"") + f4()) + "\",\n    \"device\": \""), f5("\n      let ua = navigator.userAgent;\n      if (/Android/.test(ua)) {\n          let match = ua.match(/SM-[A-Z0-9]+|ONEPLUS [A-Z0-9]+|M2007J3SG|Redmi Note [0-9]+|Mi [A-Z0-9]+/i);\n          return match ? match[0] : 'Unknown Android';\n      } else if (/iPhone/.test(ua)) {\n          return 'iPhone (Exact model hidden by Apple)';\n      } else {\n          return 'Unknown Device';\n      }\n    ")) + "\"\n  }\n}");
 		},
 		() => "high_score",
-		() => "https://lifestyle-web.cmeoffshore.com:39459/gamebe/api/games/user-score",
+		() => "https://13.61.182.4/api/userScore",
 		() => "POST",
 		() => 960,
 		() => 670,
@@ -1501,6 +1499,14 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("redirect_url");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("game_id");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("campaign_id");
 		},
 		() => "Game with XML",
 		() => "game",

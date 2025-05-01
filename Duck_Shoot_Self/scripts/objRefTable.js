@@ -193,6 +193,8 @@ self.C3_JsPropNameTable = [
 	{token: 0},
 	{jsonResponse: 0},
 	{redirect_url: 0},
+	{campaign_id: 0},
+	{gameKey: 0},
 	{duck_speed: 0},
 	{facebookShare: 0},
 	{facebook_message: 0},
