@@ -65,6 +65,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Exps.Platform,
 		C3.Plugins.AJAX.Acts.Post,
 		C3.Plugins.Browser.Acts.GoToURL,
+		C3.ScriptsInEvents.Gamesettings_Event63_Act5,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.Spritefont2.Acts.SetVisible,
 		C3.Behaviors.Fade.Acts.RestartFade,
