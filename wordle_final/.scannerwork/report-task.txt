@@ -1,0 +1,6 @@
+projectKey=Wordle_game_-27-05-2025
+serverUrl=http://localhost:9000
+serverVersion=24.12.0.100206
+dashboardUrl=http://localhost:9000/dashboard?id=Wordle_game_-27-05-2025
+ceTaskId=f06484c5-3194-4442-94b4-c9d4dba9bfe5
+ceTaskUrl=http://localhost:9000/api/ce/task?id=f06484c5-3194-4442-94b4-c9d4dba9bfe5
