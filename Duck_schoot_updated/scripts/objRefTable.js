@@ -80,7 +80,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.Json.Acts.Parse,
 		C3.Plugins.AJAX.Exps.LastData,
-		C3.Plugins.Browser.Acts.GoToURL,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Acts.RotateClockwise,
 		C3.Plugins.LocalStorage.Acts.SetItem,
