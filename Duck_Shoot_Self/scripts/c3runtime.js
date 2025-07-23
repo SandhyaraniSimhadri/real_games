@@ -1463,7 +1463,7 @@ self.C3_ExpressionFuncs = [
 			return () => (and((((and((and((and((and("{\n  \"gameKey\": \"DuckShoot\",\n  \"level\": 1,\n  \"score\": ", v0.GetValue()) + ",\n  \"campaign_id\": "), v1.GetValue()) + ",\n  \"game_id\": "), v2.GetValue()) + ",\n  \"timestamp\": \""), f3("new Date().toISOString()")) + "\",\n  \"metadata\": {\n    \"platform\": \"") + f4()) + "\",\n    \"device\": \""), f5("\n      let ua = navigator.userAgent;\n      if (/Android/.test(ua)) {\n          let match = ua.match(/SM-[A-Z0-9]+|ONEPLUS [A-Z0-9]+|M2007J3SG|Redmi Note [0-9]+|Mi [A-Z0-9]+/i);\n          return match ? match[0] : 'Unknown Android';\n      } else if (/iPhone/.test(ua)) {\n          return 'iPhone (Exact model hidden by Apple)';\n      } else {\n          return 'Unknown Device';\n      }\n    ")) + "\"\n  }\n}");
 		},
 		() => "high_score",
-		() => "https://13.60.230.96/api/userScore",
+		() => "http://13.60.230.96/api/userScore",
 		() => "POST",
 		() => 960,
 		() => 670,
