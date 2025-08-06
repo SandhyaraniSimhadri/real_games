@@ -37024,6 +37024,7 @@ cr.getObjectRefTable = function () {
 		cr.plugins_.Browser.prototype.exps.QueryParam,
 		cr.plugins_.Browser.prototype.acts.ConsoleLog,
 		cr.plugins_.AJAX.prototype.cnds.OnComplete,
+		cr.plugins_.AJAX.prototype.exps.LastData,
 		cr.plugins_.Browser.prototype.acts.GoToURL,
 		cr.plugins_.Function.prototype.cnds.OnFunction,
 		cr.system_object.prototype.acts.CreateObject,
