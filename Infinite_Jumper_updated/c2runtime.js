@@ -37101,7 +37101,6 @@ cr.getObjectRefTable = function () {
 		{game_points: 0},
 		{jsonResponse: 0},
 		{jsonBody: 0},
-		{redirect_url: 0},
 		{speedIncrement: 0},
 		{bigObstaclesDelay: 0},
 		{randomSmall: 0},
