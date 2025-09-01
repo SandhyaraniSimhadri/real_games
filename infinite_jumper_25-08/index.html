@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	
 	<!-- Made with Construct 3, the HTML5 game and app creator :: https://www.construct.net -->
-	<meta name="generator" content="Construct 3">
+	<!-- <meta name="generator" content="Construct 3"> -->
 
 
 
@@ -16,6 +16,14 @@
 	<link rel="icon" type="image/png" href="icons/icon-256.png">
 
 	<link rel="stylesheet" href="style.css">
+	<script>
+  // Prevent the "Install app" popup
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault(); // Stops the banner
+    return false;       // Extra safety
+  });
+</script>
+
 
 </head> 
  
