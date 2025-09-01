@@ -3,7 +3,7 @@
 	"short_name": "Infinite Jumper",
 	"description": "",
 	"start_url": "index.html",
-	"display": "fullscreen",
+	"display": "browser",
 	"orientation": "portrait",
 	"background_color": "#ffffff",
 	"icons": [
