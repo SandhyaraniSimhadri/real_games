@@ -1,0 +1,6 @@
+projectKey=Car_crossing-21-10-2024
+serverUrl=http://localhost:9000
+serverVersion=10.6.0.92116
+dashboardUrl=http://localhost:9000/dashboard?id=Car_crossing-21-10-2024
+ceTaskId=0759ab06-017e-48e1-8468-a7aae542b92a
+ceTaskUrl=http://localhost:9000/api/ce/task?id=0759ab06-017e-48e1-8468-a7aae542b92a
