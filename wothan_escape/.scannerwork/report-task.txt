@@ -1,0 +1,6 @@
+projectKey=wothan_escape_1-05-10-2024
+serverUrl=http://localhost:9000
+serverVersion=10.6.0.92116
+dashboardUrl=http://localhost:9000/dashboard?id=wothan_escape_1-05-10-2024
+ceTaskId=c309db83-ab12-43b5-a86a-e4a96c32fa99
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c309db83-ab12-43b5-a86a-e4a96c32fa99
